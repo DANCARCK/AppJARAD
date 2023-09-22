@@ -1,0 +1,53 @@
+  /*login general*/
+  .maindiv{
+    margin-top: 3%;
+    margin-bottom: 5%;
+  }
+  h1{
+    margin-top: 7%;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+  }
+  h2, .contmiembro{
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+  }
+  h3{
+    margin-top: 10%;
+    font-family: 'Arial Black', sans-serif;
+    text-align: center;
+    color: white;
+  }
+  .all-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+  }
+
+  /*Logo de la JARAD*/
+  .contlogo{
+    width: 40%;
+  }
+
+  .logVendedor{
+    width: 40%;
+    /*border: 3px solid #00264b;*/
+    background-color: rgba(6, 39, 1, 0.2);
+    border-radius: 10px;
+    float: right;
+    margin-left: 18%;
+  }
+  
+  /*Boton de entrar*/
+  .entrar{
+    background-color: #00264b;
+    color: white;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.5em;
+    border-radius: 15px;
+  }
+  .bottom{
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    background-color: #00264b;
+  }
