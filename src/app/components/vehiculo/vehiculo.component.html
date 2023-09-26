@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="title">
+      <h2>Vehiculos Disponibles</h2>
+      <button type="button" class="btn btn-outline-success btn-sm" routerLink="/add">Agregar Vehiculo</button>
+    </div>
+    
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Anio</th>
+            <th scope="col">Fabricante</th>
+            <th scope="col">Costo Base</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor ="let item of vehiculo" class="table-activate">
+            <th>{{ item.nombre }}</th>
+            <td>{{ item.modelo }}</td>
+            <td>{{ item.anio }}</td>
+            <td>{{ item.fabricante }}</td>
+            <td>{{ item.costoBase }}</td>
+            <td>
+              <button [routerLink]="['/edit', item.id]" type="button" class="btn btn-outline-primary btn-sm">Editar</button>
+              <button type="button" class="btn btn-outline-danger btn-sm ms-2">Borrar</button>
+            </td>
+          </tr> 
+        </tbody>
+      </table>
+</div>

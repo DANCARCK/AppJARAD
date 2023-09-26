@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
+//components
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
 import { VendedorComponent } from './components/vendedor/vendedor.component';
-import { VigilanteRegComponent } from './components/vigilante-reg/vigilante-reg.component';
+import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
+import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'vendedor', pathMatch: 'full' },
-  { path: 'app', component: AppComponent},
-  { path: 'vendedor', component: VendedorComponent },
-  { path: 'vigilante-reg', component: VigilanteRegComponent},
-  { path: '**', redirectTo: 'vendedor'}
+  { path: '', component: VehiculoComponent },
+  { path: 'add', component: AddEditVehiculoComponent },
+  { path: 'edit/:id', component: AddEditVehiculoComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
 @NgModule({

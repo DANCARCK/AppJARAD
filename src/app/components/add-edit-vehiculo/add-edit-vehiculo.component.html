@@ -1,0 +1,31 @@
+<div class="row mt-3">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-black bg-secundary mb-3" style="max-width: 25rem;">
+            <div class="card-header text-center">Agregar Vehiculo</div>
+                <div class="card-body">
+                    <form [formGroup]="form" (ngSubmit)="addVehicle()">
+                        <label class="form-label">Nombre</label>
+                        <input formControlName="nombre" type="text" class="form-control" placeholder="Ingrese Nombre">
+                        <label class="form-label mt-2">Modelo</label>
+                        <input formControlName="modelo" type="text" class="form-control mt-2" placeholder="Ingrese Modelo">
+                        <label class="form-label mt-2">Año</label>
+                        <input formControlName="anio" type="number" class="form-control mt-2" placeholder="Ingrese Año">
+                        <label class="form-label mt-2">Fabricante</label>
+                        <input formControlName="fabricante" type="text" class="form-control mt-2" placeholder="Ingrese Fabricante">
+                        <label class="form-label mt-2">Costo Base</label>
+                        <input formControlName="costoBase" type="number" class="form-control mt-2" placeholder="Ingrese Costo Base">
+                        <div class="row mt-2 text-center">
+                            <div class="col-lg-6">
+                                <button [disabled]="form.invalid" type="submit" class="btn btn-outline-success">Aceptar</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button routerLink="/" type="button" class="btn btn-outline-primary">Volver</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+
+
