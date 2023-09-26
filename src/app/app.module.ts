@@ -8,8 +8,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
 
@@ -18,8 +16,6 @@ import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edi
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
-    VendedorComponent,
     VehiculoComponent,
     AddEditVehiculoComponent
   ],

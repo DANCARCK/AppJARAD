@@ -28,8 +28,8 @@ export class AddEditVehiculoComponent {
        fabricante: this.form.value.fabricante,
        costoBase: this.form.value.costoBase
     }
-
     console.log(vehicle);
+    this.form.reset();
   }
 
 }

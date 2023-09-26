@@ -4,8 +4,6 @@ import { RouterModule, Routes } from '@angular/router';
 //components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
-import { VendedorComponent } from './components/vendedor/vendedor.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
 
