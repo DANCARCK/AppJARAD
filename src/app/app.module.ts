@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edi
     AppComponent,
     NavbarComponent,
     VehiculoComponent,
-    AddEditVehiculoComponent
+    AddEditVehiculoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
