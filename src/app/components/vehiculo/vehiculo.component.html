@@ -1,10 +1,11 @@
-<div class="container">
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="container">
     <div class="title">
       <h2>Vehiculos Disponibles</h2>
       <button type="button" class="btn btn-outline-success btn-sm" routerLink="/add">Agregar Vehiculo</button>
     </div>
     
-    <table class="table table-hover">
+    <table *ngIf="vehiculo.length > 0" class="table table-hover">
         <thead>
           <tr>
             <th scope="col">Nombre</th>
@@ -21,14 +22,15 @@
             <td>{{ item.modelo }}</td>
             <td>{{ item.anio }}</td>
             <td>{{ item.fabricante }}</td>
-            <td>{{ item.costoBase }}</td>
+            <td>{{ item.costoBase | currency }}</td>
             <td>
               <button [routerLink]="['/edit', item.id]" type="button" class="btn btn-outline-primary btn-sm">Editar</button>
-              <button type="button" class="btn btn-outline-danger btn-sm ms-2">Borrar</button>
+              <button (click)="deleteVehiculo(item.id!)" type="button" class="btn btn-outline-danger btn-sm ms-2">Borrar</button>
             </td>
           </tr> 
         </tbody>
       </table>
+      <h5 *ngIf="vehiculo.length <= 0" >No hay productos para mostrar</h5>
       <div class="fixed-bottom mt-3 mb-3 ms-3">
           <button routerLink="/login" type="button" class="btn btn-outline-danger">Cerrar Sesion</button>
       </div>

@@ -1,5 +1,7 @@
 export interface Vehiculos {
-    id? : number
+    id? : number,
+    tipoVehiculo: string,
+    niv: string,
     nombre: string,
     modelo: string,
     anio: number,

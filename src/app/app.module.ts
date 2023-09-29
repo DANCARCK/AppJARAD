@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //Modulos
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http'
+
 
 //Components
 import { AppRoutingModule } from './app-routing.module';
@@ -11,6 +13,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
 
 
 @NgModule({
@@ -19,12 +22,14 @@ import { LoginComponent } from './components/login/login.component';
     NavbarComponent,
     VehiculoComponent,
     AddEditVehiculoComponent,
-    LoginComponent
+    LoginComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
