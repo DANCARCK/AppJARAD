@@ -1,0 +1,27 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-black bg-secundary mb-3 mt-3" style="max-width: 25rem;">
+            <div class="card-header text-center">Opcion</div>
+                <div class="card-body">
+                    <form >
+                        <label class="form-label">Código</label>
+                        <input formControlName="codigo" type="text" class="form-control" placeholder="Ingrese el codigo">
+                        <label class="form-label mt-1">Descripcion</label>
+                        <input formControlName="descripcion" type="text" class="form-control" placeholder="Ingrese una descripcion">
+                        <label class="form-label mt-1">Precio</label>
+                        <input formControlName="precio" type="number" class="form-control mt-2" placeholder="Ingrese precio">
+                        <div class="row mt-3 text-center">
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-outline-success">Aceptar</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button routerLink="/vehiculo" type="button" class="btn btn-outline-primary">Volver</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>
+

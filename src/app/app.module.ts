@@ -14,6 +14,10 @@ import { VehiculoComponent } from './components/vehiculo/vehiculo.component';
 import { AddEditVehiculoComponent } from './components/add-edit-vehiculo/add-edit-vehiculo.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProgressBarComponent } from './shared/progress-bar/progress-bar.component';
+import { FacturaComponent } from './components/factura/factura.component';
+import { OpcionComponent } from './components/opcion/opcion.component';
+import { ClienteComponent } from './components/cliente/cliente.component';
+import { VehiculoInterComponent } from './components/vehiculo-inter/vehiculo-inter.component';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { ProgressBarComponent } from './shared/progress-bar/progress-bar.compone
     VehiculoComponent,
     AddEditVehiculoComponent,
     LoginComponent,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FacturaComponent,
+    OpcionComponent,
+    ClienteComponent,
+    VehiculoInterComponent
   ],
   imports: [
     BrowserModule,

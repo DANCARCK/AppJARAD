@@ -1,0 +1,9 @@
+{
+    "idVendedor": "1",
+    "email": "vendedor1@gmail.com",
+    "nombre": "Jorge",
+    "edad": "42",
+    "sexo": "Indefinido",
+    "telefono": "2221201135",
+    "tipo": "Vendedor Novato"
+}

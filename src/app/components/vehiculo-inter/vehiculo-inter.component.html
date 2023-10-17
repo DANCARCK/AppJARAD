@@ -1,0 +1,28 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="row mt-1">
+    <div class="col-lg-4 offset-lg-4">
+        <div class="card text-black bg-secundary mb-3 mt-3" style="max-width: 25rem;">
+            <div class="card-header text-center">Vehiculo Intercambio</div>
+                <div class="card-body">
+                    <form >
+                        <label class="form-label">NIV</label>
+                        <input formControlName="nivInter" type="text" class="form-control" placeholder="Ingrese el NIV">
+                        <label class="form-label mt-1">Marca</label>
+                        <input formControlName="marcaInter" type="text" class="form-control" placeholder="Ingrese la marca">
+                        <label class="form-label mt-1">Modelo</label>
+                        <input formControlName="modeloInter" type="number" class="form-control mt-2" placeholder="Ingrese el modelo">
+                        <label class="form-label mt-1">Año</label>
+                        <input formControlName="anioInter" type="number" class="form-control mt-2" placeholder="Ingrese el año">
+                        <div class="row mt-3 text-center">
+                            <div class="col-lg-6">
+                                <button type="submit" class="btn btn-outline-success">Aceptar</button>
+                            </div>
+                            <div class="col-lg-6">
+                                <button routerLink="/factura" type="button" class="btn btn-outline-primary">Volver</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+        </div>
+    </div>
+</div>

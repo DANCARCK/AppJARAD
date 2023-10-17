@@ -22,7 +22,7 @@ export class AddEditVehiculoComponent implements OnInit {
     
     this.form = this.fb.group({
       tipoVehiculo: ['Nuevo', Validators.required],
-      niv: ['', Validators.required],
+      niv: ['', [Validators.required, Validators.minLength(17), Validators.maxLength(17)]],
       nombre: ['', Validators.required],
       modelo: ['', Validators.required],
       anio: [null, Validators.required],

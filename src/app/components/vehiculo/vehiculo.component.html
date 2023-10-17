@@ -5,6 +5,7 @@
       <button type="button" class="btn btn-outline-success btn-sm" routerLink="/add">Agregar Vehiculo</button>
     </div>
     
+    <!-- TABLA VEHICULOS DISPONIBLES -->
     <table *ngIf="vehiculo.length > 0" class="table table-hover">
         <thead>
           <tr>
@@ -31,7 +32,45 @@
         </tbody>
       </table>
       <h5 *ngIf="vehiculo.length <= 0" >No hay productos para mostrar</h5>
+      
+
+      <!-- TABLA OPCIONES DISPONIBLES -->
+      <div class="title">
+        <h2>Opciones Disponibles</h2>
+        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/opcion">Agregar Opcion</button>
+      </div>
+      <table *ngIf="opcion.length > 0" class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Codigo</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor ="let item of opcion" class="table-activate">
+            <th>{{ item.codigo }}</th>
+            <td>{{ item.descripcion }}</td>
+            <td>{{ item.precio | currency }}</td>
+            <td>
+              <button [routerLink]="['', ]" type="button" class="btn btn-outline-primary btn-sm">Editar</button>
+              <button type="button" class="btn btn-outline-danger btn-sm ms-2">Borrar</button>
+            </td>
+          </tr> 
+        </tbody>
+      </table>
+      
+      <h5 *ngIf="opcion.length <= 0">No hay opciones para mostrar</h5>
+
+      <!-- BOTON GENERAR FACTURA -->
+      <div class="text-center">
+              <button routerLink="/factura" *ngIf="vehiculo.length > 0" type="button" class="btn btn-outline-warning" >Generar Factura</button>
+              <h5 *ngIf="vehiculo.length <= 0">No es posible generar una factura en este momento</h5>
+      </div>
+      
+      <!-- BOTON CERRAR SESION -->
       <div class="fixed-bottom mt-3 mb-3 ms-3">
           <button routerLink="/login" type="button" class="btn btn-outline-danger">Cerrar Sesion</button>
-      </div>
+      </div><br>
 </div>
