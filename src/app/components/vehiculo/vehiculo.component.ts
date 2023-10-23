@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Opcion } from 'src/app/interfaces/opcion';
 import { Vehiculos } from 'src/app/interfaces/vehiculos';
 import { VehiculoService } from 'src/app/services/vehiculo.service';
 
@@ -10,7 +9,6 @@ import { VehiculoService } from 'src/app/services/vehiculo.service';
 })
 export class VehiculoComponent implements OnInit{
   vehiculo: Vehiculos[] = []
-  opcion: Opcion[] = []
   loading: boolean = false;
 
   constructor(private _vehiculoService: VehiculoService){}
@@ -25,7 +23,7 @@ export class VehiculoComponent implements OnInit{
       this.vehiculo = data;
       this.loading = false;
     })
-  }
+  } 
 
   deleteVehiculo(id: number){
     this.loading = true;

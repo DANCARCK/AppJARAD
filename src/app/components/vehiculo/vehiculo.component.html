@@ -11,7 +11,7 @@
           <tr>
             <th scope="col">Nombre</th>
             <th scope="col">Modelo</th>
-            <th scope="col">Anio</th>
+            <th scope="col">Año</th>
             <th scope="col">Fabricante</th>
             <th scope="col">Costo Base</th>
             <th scope="col"></th>
@@ -32,39 +32,10 @@
         </tbody>
       </table>
       <h5 *ngIf="vehiculo.length <= 0" >No hay productos para mostrar</h5>
-      
 
-      <!-- TABLA OPCIONES DISPONIBLES -->
-      <div class="title">
-        <h2>Opciones Disponibles</h2>
-        <button type="button" class="btn btn-outline-info btn-sm" routerLink="/opcion">Agregar Opcion</button>
-      </div>
-      <table *ngIf="opcion.length > 0" class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Codigo</th>
-            <th scope="col">Descripcion</th>
-            <th scope="col">Precio</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor ="let item of opcion" class="table-activate">
-            <th>{{ item.codigo }}</th>
-            <td>{{ item.descripcion }}</td>
-            <td>{{ item.precio | currency }}</td>
-            <td>
-              <button [routerLink]="['', ]" type="button" class="btn btn-outline-primary btn-sm">Editar</button>
-              <button type="button" class="btn btn-outline-danger btn-sm ms-2">Borrar</button>
-            </td>
-          </tr> 
-        </tbody>
-      </table>
-      
-      <h5 *ngIf="opcion.length <= 0">No hay opciones para mostrar</h5>
-
-      <!-- BOTON GENERAR FACTURA -->
-      <div class="text-center">
+      <!-- BOTONES OPCION Y GENERAR FACTURA -->
+      <div class="text-center mt-5">
+              <button routerLink="/opcion" type="button" class="btn btn-outline-primary me-5" > Opciones</button>
               <button routerLink="/factura" *ngIf="vehiculo.length > 0" type="button" class="btn btn-outline-warning" >Generar Factura</button>
               <h5 *ngIf="vehiculo.length <= 0">No es posible generar una factura en este momento</h5>
       </div>

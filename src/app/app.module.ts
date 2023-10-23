@@ -18,6 +18,7 @@ import { FacturaComponent } from './components/factura/factura.component';
 import { OpcionComponent } from './components/opcion/opcion.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { VehiculoInterComponent } from './components/vehiculo-inter/vehiculo-inter.component';
+import { AddEditOpcionComponent } from './components/add-edit-opcion/add-edit-opcion.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { VehiculoInterComponent } from './components/vehiculo-inter/vehiculo-int
     FacturaComponent,
     OpcionComponent,
     ClienteComponent,
-    VehiculoInterComponent
+    VehiculoInterComponent,
+    AddEditOpcionComponent
   ],
   imports: [
     BrowserModule,

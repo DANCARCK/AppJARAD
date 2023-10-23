@@ -11,6 +11,7 @@ import { FacturaComponent } from './components/factura/factura.component';
 import { OpcionComponent } from './components/opcion/opcion.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { VehiculoInterComponent } from './components/vehiculo-inter/vehiculo-inter.component';
+import { AddEditOpcionComponent } from './components/add-edit-opcion/add-edit-opcion.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch:'full'},  
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'add', component: AddEditVehiculoComponent },
   { path: 'edit/:id', component: AddEditVehiculoComponent },
   { path: 'opcion', component: OpcionComponent },
+  { path: 'addo', component: AddEditOpcionComponent},
+  { path: 'edito/:id', component: AddEditOpcionComponent },
   { path: 'factura', component: FacturaComponent },
   { path: 'cliente', component: ClienteComponent },
   { path: 'vehiculointer', component: VehiculoInterComponent },

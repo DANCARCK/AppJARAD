@@ -10,8 +10,8 @@ import { VehiculoService } from 'src/app/services/vehiculo.service';
   styleUrls: ['./add-edit-vehiculo.component.css']
 })
 export class AddEditVehiculoComponent implements OnInit {
-  form: FormGroup;
   loading: boolean = false;
+  form: FormGroup;
   id: number;
   operacion: string = 'Agregar ';
 
@@ -25,13 +25,12 @@ export class AddEditVehiculoComponent implements OnInit {
       niv: ['', [Validators.required, Validators.minLength(17), Validators.maxLength(17)]],
       nombre: ['', Validators.required],
       modelo: ['', Validators.required],
-      anio: [null, Validators.required],
+      anio: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
       fabricante: ['', Validators.required],
       costoBase: [null, Validators.required]
     })
 
     this.id = Number(aRouter.snapshot.paramMap.get('id'));
-    console.log(aRouter.snapshot.paramMap.get('id'))
   }
 
   addVehicle(){
@@ -62,9 +61,6 @@ export class AddEditVehiculoComponent implements OnInit {
     })
     this.form.reset();
     }
-
-
-    
   }
 
   ngOnInit(): void{

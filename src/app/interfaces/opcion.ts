@@ -1,5 +1,6 @@
 export interface Opcion{
-    codigo? : number,
+    id?: number,
+    codigo : string,
     descripcion: string,
     precio: number 
 }

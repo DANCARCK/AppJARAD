@@ -4,18 +4,18 @@
         <div class="card text-black bg-secundary mb-3 mt-3" style="max-width: 25rem;">
             <div class="card-header text-center">Vehiculo Intercambio</div>
                 <div class="card-body">
-                    <form >
+                    <form [formGroup]="form" (ngSubmit)="addIntercambio()" >
                         <label class="form-label">NIV</label>
-                        <input formControlName="nivInter" type="text" class="form-control" placeholder="Ingrese el NIV">
-                        <label class="form-label mt-1">Marca</label>
-                        <input formControlName="marcaInter" type="text" class="form-control" placeholder="Ingrese la marca">
+                        <input formControlName="niv" type="text" class="form-control" placeholder="Ingrese el NIV">
+                        <label class="form-label mt-1">Nombre</label>
+                        <input formControlName="nombre" type="text" class="form-control" placeholder="Ingrese la marca">
                         <label class="form-label mt-1">Modelo</label>
-                        <input formControlName="modeloInter" type="number" class="form-control mt-2" placeholder="Ingrese el modelo">
+                        <input formControlName="modelo" type="text" class="form-control mt-2" placeholder="Ingrese el modelo">
                         <label class="form-label mt-1">Año</label>
-                        <input formControlName="anioInter" type="number" class="form-control mt-2" placeholder="Ingrese el año">
+                        <input formControlName="anio" type="number" class="form-control mt-2" placeholder="Ingrese el año">
                         <div class="row mt-3 text-center">
                             <div class="col-lg-6">
-                                <button type="submit" class="btn btn-outline-success">Aceptar</button>
+                                <button [disabled]="form.invalid" type="submit" class="btn btn-outline-success">Aceptar</button>
                             </div>
                             <div class="col-lg-6">
                                 <button routerLink="/factura" type="button" class="btn btn-outline-primary">Volver</button>
